@@ -29,7 +29,7 @@ AND amount > 10;
 SELECT *  
 FROM rental   
 ORDER by rental_date DESC 
-LIMIT 5
+LIMIT 5;
 ```
 ![alt text](https://github.com/SergeiShulga/12_03/blob/main/img/003.png)
 #### Задание 4
@@ -42,7 +42,7 @@ LIMIT 5
 ```
 SELECT LOWER(REPLACE(first_name, 'L', 'p')), LOWER(last_name) 
 FROM customer
-WHERE first_name LIKE 'Willie' OR first_name  LIKE 'Kelly'
+WHERE first_name LIKE 'Willie' OR first_name  LIKE 'Kelly';
 ```
 ![alt text](https://github.com/SergeiShulga/12_03/blob/main/img/004.png)
 
@@ -65,6 +65,6 @@ SELECT email  , SUBSTRING_INDEX(email  , '@', 1),
 CONCAT ( LEFT(UPPER(SUBSTRING_INDEX(email  , '@', 1)), 1), LOWER(SUBSTR((SUBSTRING_INDEX(email , '@',1)),2))) as '1' ,  
 SUBSTRING_INDEX(email  , '@', -1) ,
 CONCAT(LEFT(UPPER(SUBSTRING_INDEX(email  , '@', -1)), 1), LOWER(SUBSTR((SUBSTRING_INDEX(email , '@',-1)),2))) as '2'
-FROM customer c ;
+FROM customer c;
 ```
 ![alt text](https://github.com/SergeiShulga/12_03/blob/main/img/006.png)
