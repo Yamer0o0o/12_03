@@ -9,7 +9,7 @@ FROM address
 WHERE district  LIKE 'k%a' and district not LIKE  '% %';
 
 ```
-![alt text]
+![alt text](https://github.com/SergeiShulga/12_03/blob/main/img/001.png)
 
 #### Задание 2
 Получите из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 15 июня 2005 года по 18 июня 2005 года включительно и стоимость которых превышает 10.00.
@@ -20,7 +20,7 @@ FROM payment
 WHERE payment_date BETWEEN  CAST('2005-06-15' AS DATE) AND CAST('2005-06-19' AS DATE)
 AND amount > 10;
 ```
-![alt]
+![alt text](https://github.com/SergeiShulga/12_03/blob/main/img/002.png)
 
 #### Задание 3
 Получите последние пять аренд фильмов.
@@ -31,7 +31,7 @@ FROM rental
 ORDER by rental_date DESC 
 LIMIT 5
 ```
-![alt]
+![alt text](https://github.com/SergeiShulga/12_03/blob/main/img/003.png)
 #### Задание 4
 Одним запросом получите активных покупателей, имена которых Kelly или Willie.
 
@@ -44,7 +44,7 @@ SELECT LOWER(REPLACE(first_name, 'L', 'p')), LOWER(last_name)
 FROM customer
 WHERE first_name LIKE 'Willie' OR first_name  LIKE 'Kelly'
 ```
-![alt]
+![alt text](https://github.com/SergeiShulga/12_03/blob/main/img/004.png)
 
 Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
@@ -55,7 +55,7 @@ WHERE first_name LIKE 'Willie' OR first_name  LIKE 'Kelly'
 SELECT email, SUBSTRING_INDEX(email , '@', 1), SUBSTRING_INDEX(email , '@', -1)
 FROM customer;
 ```
-![alt]
+![alt text](https://github.com/SergeiShulga/12_03/blob/main/img/005.png)
 
 #### Задание 6*
 Доработайте запрос из предыдущего задания, скорректируйте значения в новых колонках: первая буква должна быть заглавной, остальные — строчными.
@@ -67,4 +67,4 @@ SUBSTRING_INDEX(email  , '@', -1) ,
 CONCAT(LEFT(UPPER(SUBSTRING_INDEX(email  , '@', -1)), 1), LOWER(SUBSTR((SUBSTRING_INDEX(email , '@',-1)),2))) as '2'
 FROM customer c ;
 ```
-![alt]
+![alt text](https://github.com/SergeiShulga/12_03/blob/main/img/006.png)
