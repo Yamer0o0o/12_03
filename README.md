@@ -17,8 +17,8 @@ WHERE district  LIKE 'k%a' and district not LIKE  '% %';
 ```
 SELECT *
 FROM payment
-WHERE payment_date BETWEEN  CAST('2005-06-15' AS DATE) AND CAST('2005-06-19' AS DATE)
-AND amount > 10;
+WHERE payment_date  BETWEEN '2005-06-15' and '2005-06-19' and amount > 10
+ORDER BY payment_date;
 ```
 ![alt text](https://github.com/SergeiShulga/12_03/blob/main/img/002.png)
 
