@@ -20,7 +20,7 @@ FROM payment
 WHERE payment_date  BETWEEN '2005-06-15' and '2005-06-19' and amount > 10
 ORDER BY payment_date;
 ```
-![alt text](https://github.com/SergeiShulga/12_03/blob/main/img/002.png)
+![alt text](https://github.com/SergeiShulga/12_03/blob/main/img/007.png)
 
 #### Задание 3
 Получите последние пять аренд фильмов.
